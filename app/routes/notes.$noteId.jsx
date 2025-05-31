@@ -1,6 +1,6 @@
-import { json } from "@remix-run/node";
+import { data } from "@remix-run/node";
 import { NavLink, useLoaderData } from "@remix-run/react";
-import styles from "../styles/note-details.css";
+import styles from "../styles/note-details.css?url";
 import { getStoredNotes } from "../data/notes";
 
 export default function NoteDetailsPage() {
@@ -25,7 +25,7 @@ export async function loader({ params }) {
   const selectedNote = notes.find((note) => note.id === params.noteId);
 
   if (!selectedNote) {
-    throw json({ message: "Note not found" }, { status: 404 });
+    throw data({ message: "Note not found" }, { status: 404 });
   }
 
   return selectedNote;

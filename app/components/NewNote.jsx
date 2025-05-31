@@ -1,5 +1,5 @@
 import { Form, useActionData, useNavigation } from "@remix-run/react";
-import styles from "./NewNote.css";
+import styles from "./NewNote.css?url";
 
 function NewNote() {
   const navigation = useNavigation();

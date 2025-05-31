@@ -8,7 +8,7 @@ import {
 import type { LinksFunction } from "@remix-run/node";
 
 import MainNavigation from "./components/MainNavigation";
-import styles from "./styles/main.css";
+import styles from "./styles/main.css?url";
 
 export const links: LinksFunction = () => [
   {
